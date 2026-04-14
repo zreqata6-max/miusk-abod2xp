@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>متجر الآلات الموسيقية</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial;
+    background: #0f172a;
+    color: white;
+}
+
+/* شاشة البداية */
+#splash {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #020617, #1e293b);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 9999;
+}
+
+#splash h1 {
+    font-size: 40px;
+    color: gold;
+}
+
+/* شريط التنقل */
+nav {
+    background: #020617;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: gold;
+}
+
+/* القسم الرئيسي */
+.hero {
+    text-align: center;
+    padding: 50px;
+}
+
+.hero h2 {
+    font-size: 35px;
+    color: gold;
+}
+
+/* المنتجات */
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 40px;
+}
+
+.card {
+    background: #1e293b;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.price {
+    color: gold;
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+button {
+    background: gold;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+/* فوتر */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #020617;
+}
+</style>
+
+</head>
+<body>
+
+<!-- شاشة البداية -->
+<div id="splash">
+    <h1>تم تصميم هذا الموقع بواسطة</h1>
+    <h1>عبدالله ابو زريق</h1>
+</div>
+
+<!-- شريط التنقل -->
+<nav>
+    <h2>abdalluh zreqat</h2>
+    <div>
+        <a href="#">الرئيسية</a>
+        <a href="#">المنتجات</a>
+        <a href="#">تواصل</a>
+    </div>
+</nav>
+
+<!-- الصفحة الرئيسية -->
+<section class="hero">
+    <h2>أفضل الآلات الموسيقية</h2>
+    <p>اختار آلتك المفضلة بجودة عالية 🔥</p>
+</section>
+
+<!-- المنتجات -->
+<section class="products">
+
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d">
+        <h3>قيتار</h3>
+        <p class="price">$200</p>
+        <button>شراء</button>
+    </div>
+
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1507838153414-b4b713384a76">
+        <h3>بيانو</h3>
+        <p class="price">$500</p>
+        <button>شراء</button>
+    </div>
+
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1519895609939-d2a649c9c3c6">
+        <h3>درامز</h3>
+        <p class="price">$350</p>
+        <button>شراء</button>
+    </div>
+
+</section>
+
+<footer>
+    <p>© جميع الحقوق محفوظة - عبدالله ابو زريق</p>
+</footer>
+
+<script>
+// اختفاء شاشة البداية بعد 3 ثواني
+setTimeout(() => {
+    document.getElementById("splash").style.display = "none";
+}, 3000);
+</script>
+
+</body>
+</html>
